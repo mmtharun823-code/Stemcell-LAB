@@ -1,0 +1,16 @@
+
+name: Main Workflow
+
+on: [push, pull_request, workflow_dispatch]
+
+jobs:
+  check:
+    name: Check Repository
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Confirm workflow runs
+        run: echo "GitHub Actions workflow is running successfully!"
